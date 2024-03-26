@@ -16,6 +16,19 @@ git+https://token:${GITHUB_TOKEN}@github.com/morphysm/securityriskcard.git@main
 ```
 Where you just need to export a `GITHUB_TOKEN` variable during build.
 
+### Usage example:
+```python
+from securityriskcard import convert_to_risk
+
+# Your scorecard result goes here.
+data = convert_to_risk(scorecard_data)
+print(json.dumps(data, indent=4))
+```
+Or if you want to test if the package is installed and you have scorecard result as json file:
+```bash
+python -m securityriskcard <path/to/scorecard.json>
+```
+
 ### Testing
 
 Currently package contains some regression tests, which you can run during development or refactor to ensure data is output the same.
