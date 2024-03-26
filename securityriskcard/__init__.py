@@ -58,8 +58,6 @@ def _filter_check(check: dict):
 
 
 def convert_to_risk(data: dict):
-    from pprint import pprint
-
     data["checks"] = [_convert_check(check) for check in data["checks"] if _filter_check(check)]
     data["score"] = calculate_score(data["checks"])
     return data
