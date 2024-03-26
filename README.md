@@ -12,7 +12,7 @@ git+https://github.com/morphysm/securityriskcard.git@main
 **Note** however, that this requires you to authorize every time you install with a token.
 So, if you need to install it without interaction (e.g. inside docker), use the following:
 ```
-git+https://token:<GITHUB_TOKEN>@github.com/morphysm/securityriskcard.git@main
+git+https://token:${GITHUB_TOKEN}@github.com/morphysm/securityriskcard.git@main
 ```
 Where you just need to export a `GITHUB_TOKEN` variable during build.
 
