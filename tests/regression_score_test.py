@@ -19,7 +19,3 @@ def test_regression_score_formula():
     input_data, result_data = load_test_data("autogpt")
     assert input_data["score"] == calculate_score(input_data["checks"])
     assert result_data["score"] == calculate_score(result_data["checks"])
-
-
-if __name__ == "__main__":
-    test_regression_score_formula()
