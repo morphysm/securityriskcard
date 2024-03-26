@@ -13,7 +13,7 @@ def read_requirements(req_path: str = "requirements.txt"):
 
 setup(
     name="securityriskcard",
-    version="0.0.1",
+    version="0.0.2",
     packages=find_packages(),
     install_requires=read_requirements(),
     tests_require=read_requirements("requirements-test.txt"),

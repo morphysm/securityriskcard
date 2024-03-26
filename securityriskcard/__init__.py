@@ -1,7 +1,44 @@
 import re
 
+MIN_SCORE = 0
 MAX_SCORE = 10
 RE_REASON = re.compile(r"(-- score normalized to) \d+")
+
+CHECK_TO_RISK = {
+    "Binary-Artifacts": "High",
+    "Branch-Protection": "High",
+    "CI-Tests": "Low",
+    "CII-Best-Practices": "Low",
+    "Code-Review": "High",
+    "Contributors": "Low",
+    "Dangerous-Workflow": "Critical",
+    "Dependency-Update-Tool": "High",
+    "Fuzzing": "Medium",
+    "License": "Low",
+    "Maintained": "High",
+    "Pinned-Dependencies": "Medium",
+    "Packaging": "Medium",
+    "SAST": "Medium",
+    "Security-Policy": "Medium",
+    "Signed-Releases": "High",
+    "Token-Permissions": "High",
+    "Vulnerabilities": "High",
+    "Webhooks": "Critical",
+}
+RISK_TO_WEIGHT = {"Critical": 10, "High": 7.5, "Medium": 5, "Low": 2.5}
+
+
+def calculate_score(checks: list):
+    total, score = 0, 0
+    for check in checks:
+        # Ignore 'inconclusive' score (-1).
+        if check["score"] < MIN_SCORE:
+            continue
+
+        weight = RISK_TO_WEIGHT[CHECK_TO_RISK[check["name"]]]
+        total += weight
+        score += weight * check["score"]
+    return round(score / total, 1)
 
 
 def _convert_check(check: dict):
@@ -21,8 +58,8 @@ def _filter_check(check: dict):
 
 
 def convert_to_risk(data: dict):
-    if data["score"] is not None:
-        data["score"] = round(MAX_SCORE - data["score"], 1)
+    from pprint import pprint
 
     data["checks"] = [_convert_check(check) for check in data["checks"] if _filter_check(check)]
+    data["score"] = calculate_score(data["checks"])
     return data
