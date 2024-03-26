@@ -1,0 +1,6 @@
+/testdata
+/securityriskcard.egg-info
+/build
+*.eggs
+*.sh
+__pycache__

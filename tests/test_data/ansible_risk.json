@@ -1,0 +1,233 @@
+{
+    "date": "2024-03-26T08:56:31Z",
+    "repo": {
+        "name": "github.com/ansible/ansible",
+        "commit": "a870e7d0c6368dbc4c8f1f088f540e8be07223e1"
+    },
+    "scorecard": {
+        "version": "v4.13.1-239-gbf18c275",
+        "commit": "bf18c2750806b3f279e2fb6a67f911abd586925d"
+    },
+    "score": 4.6,
+    "checks": [
+        {
+            "details": null,
+            "score": 0,
+            "reason": "no binaries found in the repo",
+            "name": "Binary-Artifacts",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#binary-artifacts",
+                "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+            }
+        },
+        {
+            "details": [
+                "Info: 'allow deletion' disabled on branch 'devel'",
+                "Info: 'force pushes' disabled on branch 'devel'",
+                "Warn: branch 'devel' does not require approvers",
+                "Warn: codeowners review is not required on branch 'devel'",
+                "Info: status check found to merge onto on branch 'devel'"
+            ],
+            "score": 7,
+            "reason": "branch protection is not maximal on development and all release branches",
+            "name": "Branch-Protection",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#branch-protection",
+                "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+            }
+        },
+        {
+            "details": null,
+            "score": 0,
+            "reason": "30 out of 30 merged PRs checked by a CI test -- score normalized to 0",
+            "name": "CI-Tests",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#ci-tests",
+                "short": "Determines if the project runs tests before pull requests are merged."
+            }
+        },
+        {
+            "details": null,
+            "score": 2,
+            "reason": "found 6 unreviewed changesets out of 30 -- score normalized to 2",
+            "name": "Code-Review",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#code-review",
+                "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+            }
+        },
+        {
+            "details": [
+                "Info: freeipa contributor org/company found, apache contributor org/company found, fortinet @fortinet @fortinet-solutions-cse contributor org/company found, requests contributor org/company found, civx contributor org/company found, FOSSRIT contributor org/company found, sourceoptics contributor org/company found, ansible-collection-migration contributor org/company found, skedulo contributor org/company found, nycapitolcamp contributor org/company found, linux-vserver contributor org/company found, ansible-community contributor org/company found, proxytunnel contributor org/company found, timelab contributor org/company found, red hat contributor org/company found, python-cffi contributor org/company found, maintainers contributor org/company found, git-ftp contributor org/company found, dgplug contributor org/company found, hyperkitty contributor org/company found, oamg contributor org/company found, ansible-collections contributor org/company found, jctanner-org contributor org/company found, yaml contributor org/company found, red hat  (ibm) contributor org/company found, ansible @redhatofficial contributor org/company found, dagit contributor org/company found, ngine-io contributor org/company found, ngine-io @moser-systems contributor org/company found, network-automation contributor org/company found, ansible-network contributor org/company found, red hat @ansible contributor org/company found, repoforge contributor org/company found, unoconv contributor org/company found, redhatofficial contributor org/company found, ansible contributor org/company found, CodingRobots contributor org/company found, ansible-provisioning contributor org/company found, crombeen contributor org/company found, redhat inc contributor org/company found, vespene-io contributor org/company found, jetporch contributor org/company found, elrepo contributor org/company found, red hat canada contributor org/company found, fortinet-solutions-cse contributor org/company found, redhat contributor org/company found, cobbler contributor org/company found, "
+            ],
+            "score": 0,
+            "reason": "project has 47 contributing companies or organizations",
+            "name": "Contributors",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#contributors",
+                "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
+            }
+        },
+        {
+            "details": null,
+            "score": -1,
+            "reason": "no workflows found",
+            "name": "Dangerous-Workflow",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#dangerous-workflow",
+                "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+            }
+        },
+        {
+            "details": [
+                "Warn: tool 'RenovateBot' is not used",
+                "Warn: tool 'Dependabot' is not used",
+                "Warn: tool 'PyUp' is not used"
+            ],
+            "score": 10,
+            "reason": "no update tool detected",
+            "name": "Dependency-Update-Tool",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#dependency-update-tool",
+                "short": "Determines if the project uses a dependency update tool."
+            }
+        },
+        {
+            "details": [
+                "Info: OSSFuzz integration found"
+            ],
+            "score": 0,
+            "reason": "project is fuzzed",
+            "name": "Fuzzing",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#fuzzing",
+                "short": "Determines if the project uses fuzzing."
+            }
+        },
+        {
+            "details": [
+                "Info: FSF or OSI recognized license: COPYING:1",
+                "Info: License file found in expected location: COPYING:1"
+            ],
+            "score": 0,
+            "reason": "license file detected",
+            "name": "License",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#license",
+                "short": "Determines if the project has defined a license."
+            }
+        },
+        {
+            "details": null,
+            "score": 0,
+            "reason": "30 commit(s) and 11 issue activity found in the last 90 days -- score normalized to 0",
+            "name": "Maintained",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#maintained",
+                "short": "Determines if the project is \"actively maintained\"."
+            }
+        },
+        {
+            "details": [
+                "Warn: no GitHub/GitLab publishing workflow detected."
+            ],
+            "score": -1,
+            "reason": "packaging workflow not detected",
+            "name": "Packaging",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#packaging",
+                "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+            }
+        },
+        {
+            "details": [
+                "Info: Possibly incomplete results: error parsing shell code: if statement must end with \"fi\": test/integration/targets/lineinfile/files/test_58923.txt:0",
+                "Info: Possibly incomplete results: error parsing shell code: if statement must end with \"fi\": test/integration/targets/lineinfile/files/teststring_58923.txt:0",
+                "Warn: containerImage not pinned by hash: lib/ansible/galaxy/data/apb/Dockerfile.j2:1: pin your Docker image by updating ansibleplaybookbundle/apb-base to ansibleplaybookbundle/apb-base@sha256:783f7f4c1331db61c396c3c1e5a4b8022fb9f8a3590d052eae539f97c6a63cc2",
+                "Warn: pipCommand not pinned by hash: .azure-pipelines/scripts/report-coverage.sh:12",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/ansible-test-installed/runme.sh:15",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/ansible-vault/runme.sh:440",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/collections_runtime_pythonpath/runme.sh:22",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/collections_runtime_pythonpath/runme.sh:29",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/entry_points/runme.sh:12",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/packaging_cli-doc/runme.sh:15",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/packaging_cli-doc/runme.sh:24",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/pyyaml/runme.sh:9",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/setup_passlib_controller/runme.sh:12",
+                "Warn: pipCommand not pinned by hash: test/integration/targets/template_jinja2_non_native/runme.sh:7",
+                "Info:   0 out of   1 containerImage dependencies pinned",
+                "Info:   0 out of  11 pipCommand dependencies pinned"
+            ],
+            "score": 10,
+            "reason": "dependency not pinned by hash detected -- score normalized to 10",
+            "name": "Pinned-Dependencies",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#pinned-dependencies",
+                "short": "Determines if the project has declared and pinned the dependencies of its build process."
+            }
+        },
+        {
+            "details": [
+                "Warn: 0 commits out of 30 are checked with a SAST tool"
+            ],
+            "score": 10,
+            "reason": "SAST tool is not run on all commits -- score normalized to 10",
+            "name": "SAST",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#sast",
+                "short": "Determines if the project uses static code analysis."
+            }
+        },
+        {
+            "details": [
+                "Warn: no security policy file detected",
+                "Warn: no security file to analyze",
+                "Warn: no security file to analyze",
+                "Warn: no security file to analyze"
+            ],
+            "score": 10,
+            "reason": "security policy file not detected",
+            "name": "Security-Policy",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#security-policy",
+                "short": "Determines if the project has published a security policy."
+            }
+        },
+        {
+            "details": null,
+            "score": -1,
+            "reason": "no releases found",
+            "name": "Signed-Releases",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#signed-releases",
+                "short": "Determines if the project cryptographically signs release artifacts."
+            }
+        },
+        {
+            "details": null,
+            "score": -1,
+            "reason": "No tokens found",
+            "name": "Token-Permissions",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#token-permissions",
+                "short": "Determines if the project's workflows follow the principle of least privilege."
+            }
+        },
+        {
+            "details": [
+                "Warn: Project is vulnerable to: GHSA-h5c8-rqwp-cp95",
+                "Warn: Project is vulnerable to: GHSA-3pqx-4fqf-j49f / PYSEC-2020-176",
+                "Warn: Project is vulnerable to: GHSA-6757-jp84-gxfx / PYSEC-2020-96",
+                "Warn: Project is vulnerable to: GHSA-8q59-q68h-6hv4 / PYSEC-2021-142"
+            ],
+            "score": 4,
+            "reason": "4 existing vulnerabilities detected",
+            "name": "Vulnerabilities",
+            "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/bf18c2750806b3f279e2fb6a67f911abd586925d/docs/checks.md#vulnerabilities",
+                "short": "Determines if the project has open, known unfixed vulnerabilities."
+            }
+        }
+    ],
+    "metadata": null
+}
