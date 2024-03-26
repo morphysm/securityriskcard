@@ -18,4 +18,5 @@ Where you just need to export a `GITHUB_TOKEN` variable during build.
 
 ### Testing
 
-Currently package contains some regression tests, so you will have to 
+Currently package contains some regression tests, which you can run during development or refactor to ensure data is output the same.
+The directory with test data also includes a script to generate output to 'freeze' current state. Do not run it until you are confident that change behaves as expected.
