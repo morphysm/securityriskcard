@@ -48,16 +48,18 @@ def _convert_check(check: dict):
     return check
 
 
-def _filter_check(check: dict):
+def _filter_check(check: dict, ignore_cii_badge: bool):
     # @TODO: Here we are ignoring the gimmic (badge) check, so we don't need to bother displaying
     #        it nor will we want to confuse LLM at any point to count this as a meaningful risk.
     #        However, with this change the total risk might not properly add up to 10, which is
     #        very unlikely to happen anyways so we are not as affected right now, but fixing it
     #        long term is probably a good idea.                               - andrew, March 26 2024
-    return check["name"].lower() != "cii-best-practices"
+    if ignore_cii_badge:
+        return check["name"].lower() != "cii-best-practices"
+    return True
 
 
-def convert_to_risk(data: dict):
-    data["checks"] = [_convert_check(check) for check in data["checks"] if _filter_check(check)]
+def convert_to_risk(data: dict, ignore_cii_badge=True):
+    data["checks"] = [_convert_check(check) for check in data["checks"] if _filter_check(check, ignore_cii_badge)]
     data["score"] = calculate_score(data["checks"])
     return data
