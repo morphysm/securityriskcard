@@ -13,13 +13,13 @@ def read_requirements(req_path: str = "requirements.txt"):
 
 setup(
     name="securityriskcard",
-    version="0.0.4",
+    version="0.0.5",
     author="Cyberfame Team",
     author_email="0x4480@cyberfame.io",
     description="Conversion from scorecard ratings to risk ratings.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/cyberfame/securityriskcard",
+    url="https://github.com/morphysm/securityriskcard",
     license="AGPL-3.0",
     packages=find_packages(),
     install_requires=read_requirements(),
