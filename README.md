@@ -1,7 +1,11 @@
 # SecurityRiskCard
 
 This package provides an simple shared way of converting security scorecard data from "wellness" into risk.
+Available in:
+- [Python (PyPi)](#python)
+- [Typescript (NPM)](#typescript)
 
+## Python
 ### Installing
 
 To install from PyPi:
@@ -27,7 +31,24 @@ Or if you want to test if the package is installed and you have scorecard result
 python -m securityriskcard <path/to/scorecard.json>
 ```
 
-### Testing
+## Typescript
+### Installing
 
-Currently package contains some regression tests, which you can run during development or refactor to ensure data is output the same.
+To install from NPM:
+```bash
+npm i --save securityriskcard
+```
+
+### Usage example
+```typescript
+import { convertToRisk } from 'securityriskcard'
+
+// Your scorecard result goes here.
+const data = convertToRisk(scorecardData)
+console.log(data);
+```
+
+## Testing
+
+Currently packages contain some regression tests, which you can run during development or refactor to ensure data is output the same.
 The directory with test data also includes a script to generate output to 'freeze' current state. Do not run it until you are confident that change behaves as expected.

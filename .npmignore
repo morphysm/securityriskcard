@@ -1,0 +1,13 @@
+/testdata
+/securityriskcard.egg-info
+/build
+*.eggs
+*.sh
+__pycache__
+/lib
+/tests
+/securityriskcard/*.py
+requirements*.txt
+setup.py
+jest.config.js
+/.pytest_cache

@@ -4,3 +4,4 @@
 *.eggs
 *.sh
 __pycache__
+/lib

@@ -13,7 +13,7 @@ def read_requirements(req_path: str = "requirements.txt"):
 
 setup(
     name="securityriskcard",
-    version="0.0.6",
+    version="0.0.8",
     author="Cyberfame Team",
     author_email="0x4480@cyberfame.io",
     description="Conversion from scorecard ratings to risk ratings.",
