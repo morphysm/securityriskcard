@@ -1,0 +1,17 @@
+[flake8]
+# W503 is actually not a PEP8 violation. It was superseded by W504 which does the exact opposite. https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator.
+# E241 doesn't allow good formatiing of code, when few consequent lines of code have different length (before or after '=').
+# E251 ("unexpected spaces around keyword / parameter equals") is bad for formatting.
+# E272 gets in the way of good formatting of the code.
+# E701 - allow one-liner if statements.
+# E203 - allow whitespace before ':' in slices. Black handles this
+ignore = W293,W503,Q003,E211,E221,E241,E251,E271,E272,E701,E704,E731,E203
+max-line-length = 131
+# We use " not '.
+inline-quotes = double
+exclude =
+    .venv/
+    .stubs
+    repo_data/
+    build/
+    tests/
