@@ -15,6 +15,7 @@ body:
       placeholder: |
         - I want to see ABC when I click XYZ
         - When user does XYZ, the app should do ABC
+        - When I run ABC, the output should be XYZ
     validations:
       required: false
   - type: textarea
