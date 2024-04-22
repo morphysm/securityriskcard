@@ -13,8 +13,8 @@ body:
       label: Acceptance Criteria
       description: List of deliverables or conditions for completion
       placeholder: |
-        - Do ABC
-        - Achieve XYZ
+        - I want to see ABC when I click XYZ
+        - When user does XYZ, the app should do ABC
     validations:
       required: false
   - type: textarea
